@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Universal Traveller Tool (UTT)</title>
+    <link href="css/leaflet.css" type="text/css" rel=stylesheet>
+    <link href="css/style.css" type="text/css" rel=stylesheet>
+  </head>
+  <body>
+    <div class="starfield"></div>
+    <h1 style="color: #32CD32; text-align: center;">TAS Planetary Data Interface Circa. 3002</h1>  
+    <button id="invert-btn" class="custom-btn">Invert Map</button>
+    <button id="toggle-marker-btn" class="custom-btn">Toggle Spaceship</button>
+    <a href="sector_data/Binder%20Front%20Pages.pdf" target="_blank">
+      <button id="explain-btn" class="custom-btn">Explanatory Data</button>
+    </a>
+    <button id="toggleLegend" class="custom-btn">Toggle Legend</button>
+    <div id="map"></div> <!-- The map! -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/esri-leaflet-debug.js"></script>
+    <script src="js/Fog_of_War.js"></script>
+    <script src="js/PlanetaryData.js"></script>
+    <script src="js/PoliticalBoundaries.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

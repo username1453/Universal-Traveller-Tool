@@ -128,7 +128,7 @@ updateCircleMarkers();
 
 // 🪐 CUSTOM ICON DEFINITIONS
 var wetIcon = new L.Icon({
-    iconUrl: '../images/wet-planet.png',
+    iconUrl: 'images/wet-planet.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -32]

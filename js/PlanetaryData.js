@@ -45,7 +45,7 @@ var planetarydata = {
                 "prison": "No",
                 "research": "No",
                 "ORIG_FID": 2,
-                "Link": "maps/Gladstone.png"
+                "Link": "../maps/Gladstone.png"
             }
         },
         {

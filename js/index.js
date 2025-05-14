@@ -128,7 +128,7 @@ updateCircleMarkers();
 
 // 🪐 CUSTOM ICON DEFINITIONS
 var wetIcon = new L.Icon({
-    iconUrl: 'images/wet-planet.png',
+    iconUrl: '../images/wet-planet.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -32]
@@ -199,7 +199,7 @@ function planetaryfeatures(feature, layer) {
     // Call planetaryzones to add zone circles for each feature
     planetaryzones(feature, layer);
     var link = feature.properties.Link;
-    var imageUrl = 'http://localhost:8000/' + encodeURIComponent(link);
+    var imageUrl = 'https://username1453.github.io/Universal-Traveller-Tool/' + encodeURIComponent(link);
     
     // Replace only problematic filename characters (leave spaces intact)
     var sanitizedName = feature.properties.Name.replace(/[<>:"\/\\|?*\']+/g, '_').trim();

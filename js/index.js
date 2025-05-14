@@ -128,28 +128,28 @@ updateCircleMarkers();
 
 // 🪐 CUSTOM ICON DEFINITIONS
 var wetIcon = new L.Icon({
-    iconUrl: '../images/wet-planet.png',
+    iconUrl: 'images/wet-planet.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -32]
 });
 
 var dryIcon = new L.Icon({
-    iconUrl: '../images/dry-planet.png',
+    iconUrl: 'images/dry-planet.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -32]
 });
 
 var asteroidIcon = new L.Icon({
-    iconUrl: '../images/asteroids.png',
+    iconUrl: 'images/asteroids.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -32]
 });
 
 var basicicon = new L.Icon({
-    iconUrl: '../images/marker-icon.png'
+    iconUrl: 'images/marker-icon.png'
 });
 
 // Setting Icon

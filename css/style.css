@@ -1,0 +1,281 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure the html and body take up the full height and width */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;  /* Ensures z-index works properly */
+  }
+  
+  /* Space background with stars */
+  body {
+    background: #000;
+    overflow: hidden;  /* Prevents scrolling */
+  }
+  
+  /* Style for the custom buttons */
+.custom-btn {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    border-radius: 12px; /* Rounded edges */
+    border: 3px solid #32CD32; /* Thick green outline */
+    background-color: transparent; /* Transparent fill */
+    color: #32CD32; /* Green text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    display: inline-block; /* Ensures the text is centered */
+    line-height: 1.4; /* Adjust line height for better vertical alignment */
+    width: auto; /* Ensure width adjusts based on text */
+    min-width: 120px; /* Prevent buttons from being too narrow */
+    height: 28px; /* Define a standard button height */
+  }
+  
+  .custom-btn:hover {
+    background-color: #32CD32; /* Light green background on hover */
+    color: black; /* White text on hover */
+  }
+
+  /* Specific button positioning */
+  #invert-btn {
+    top: 1%;
+    right: 2%;
+  }
+  
+  #toggle-marker-btn {
+    top: 1%;
+    right: 12%;
+  }
+
+  #explain-btn {
+    top: 1%;
+    left: 2%;
+  }
+
+  #toggleLegend {
+    top: 1%;
+    left: 12%;
+  }
+  
+/* Create the stars */
+.starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/darkness.webp') repeat; /* A small starry image */
+    animation: move-stars 30s linear infinite;
+    z-index: -1; /* Ensures stars are behind the content */
+}
+
+/* Animation for moving the stars */
+@keyframes move-stars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Make sure the map takes up the only part of the screen and is centered */
+#map {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 90%;
+    z-index: 1;  /* Ensures map stays above the stars */
+    background: url('../images/darkness.webp') repeat; /* Starfield image as background */
+    background-size: cover; /* Make the background cover the entire map */
+    animation: move-stars 30s linear infinite; /* Animation to move the stars */
+
+    display: grid;
+    place-items: center;
+    transform: translate(-50%, -50%);  /* Center map */
+    overflow: hidden; /* Hide overflow to ensure the gradient doesn’t spill out */
+}
+
+
+/* Create the gradient effect using ::before */
+#map::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, 
+    rgba(0, 0, 0, 0) 60%, 
+    rgba(0, 0, 0, 0.5) 85%, 
+    rgba(0, 0, 0, 0.9) 95%, 
+    rgba(0, 0, 0, 1) 100%);
+    pointer-events: none; /* Prevent blocking interactions */
+    z-index: 500; /* Ensure it's on top of the map but not over the stars */
+}
+
+.leaflet-tile {
+    filter: invert(100%);
+}
+
+/* Fix the map container's white background */
+.leaflet-container {
+    background-color: transparent !important; /* Remove white background from Leaflet container */
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 2;  /* Ensures topnav stays above the map */
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    background-color: #ddd;
+    padding: 10px;
+    height: 200px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    z-index: 2;  /* Ensures footer stays above the stars */
+}
+
+/* Custom Popup Style with Starfield Background */
+.leaflet-popup-content-wrapper {
+    background: url('../images/darkness.webp') repeat !important; /* Starfield background */
+    background-size: cover !important; /* Ensure the background fits the popup */
+    border: 2px solid #32CD32 !important; /* Green border */
+    color: #32CD32 !important; /* Green text */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.5); /* Soft green glow effect */
+}
+
+/* Style the popup tip (arrow) */
+.leaflet-popup-tip {
+    background: url('../images/darkness.webp') repeat !important; /* Match popup background */
+    background-size: cover !important;
+    border: 2px solid #32CD32 !important; /* Match popup border */
+}
+
+/* Style popup content specifically */
+.leaflet-popup-content {
+    color: #32CD32 !important; /* Green text */
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(50, 205, 50, 0.8); /* Add slight text glow for readability */
+    line-height: 0.5; /* Adjust line spacing */
+    padding: 0; /* Remove any default padding */
+}
+
+/* Tooltip for Name Code (Above Icon) */
+.custom-tooltip {
+    background: none !important; 
+    border: none !important;     
+    box-shadow: none !important; 
+    color: #32CD32 !important;   
+    font-weight: bold;           
+    font-size: 14px;             
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.8),   /* Top-left shadow */
+        -1px -1px 0 rgba(0, 0, 0, 0.8), /* Bottom-right shadow */
+        1px -1px 0 rgba(0, 0, 0, 0.8),  /* Top-right shadow */
+        -1px 1px 0 rgba(0, 0, 0, 0.8);  /* Bottom-left shadow */
+    pointer-events: none;        
+}
+
+/* Tooltip for UWP Code (Below Icon) */
+.custom-uwp-tooltip {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #FFD700 !important;
+    font-weight: bold;
+    font-size: 10px;
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.8),   /* Top-left shadow */
+        -1px -1px 0 rgba(0, 0, 0, 0.8), /* Bottom-right shadow */
+        1px -1px 0 rgba(0, 0, 0, 0.8),  /* Top-right shadow */
+        -1px 1px 0 rgba(0, 0, 0, 0.8);  /* Bottom-left shadow */
+    pointer-events: none;
+    text-align: center;
+}
+
+
+/* Hide the tooltip triangle */
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+    border: none;  /* Remove the triangle */
+}
+
+.leaflet-marker-icon {
+    filter: none !important;  /* Disable tile inversion for icons */
+}
+
+.iconsdiv {
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;
+}
+
+.icon-gasgiant {
+    background-image: url('../images/gas_giant.png');
+}
+
+.icon-naval {
+    background-image: url('../images/naval_base.png');
+}
+
+.icon-scout {
+    background-image: url('../images/scout_base.png');
+}
+
+.icon-research {
+    background-image: url('../images/research_station.png');
+}
+
+/* Legend */
+/* This applies to the Leaflet legend control */
+.leaflet-control.legend-control {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    z-index: 1000;
+  }
+  
+  .legend-hidden {
+    display: none !important;
+  }

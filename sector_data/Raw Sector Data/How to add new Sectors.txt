@@ -1,0 +1,8 @@
+How to add new sectors:
+
+Go to the traveller map website and access the source code download.
+In the source code on GitHub, go through the res file for the milleu you want.
+(I used 1105 as my base)
+Inside the milleu download the .tab file for the sector you want
+The .tab file is unusable, but it can be converted through the data wizard funtion in excel
+(data tab, import text, sort for all file types, select then save as a new excel sheet)

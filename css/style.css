@@ -249,19 +249,19 @@ html, body {
 }
 
 .icon-gasgiant {
-    background-image: url('../images/gas_giant.png');
+    background-image: url('../images/gas_giant.png'); /* Unused */
 }
 
 .icon-naval {
-    background-image: url('../images/naval_base.png');
+    background-image: url('../images/naval_base.png'); /* Unused */
 }
 
 .icon-scout {
-    background-image: url('../images/scout_base.png');
+    background-image: url('../images/scout_base.png'); /* Unused */
 }
 
 .icon-research {
-    background-image: url('../images/research_station.png');
+    background-image: url('../images/research_station.png'); /* Unused */
 }
 
 /* Legend */

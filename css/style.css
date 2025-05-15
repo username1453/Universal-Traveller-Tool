@@ -249,19 +249,19 @@ html, body {
 }
 
 .icon-gasgiant {
-    background-image: url('../images/gas_giant.png');
+    background-image: url('Universal-Traveller-Tool/images/gas_giant.png');
 }
 
 .icon-naval {
-    background-image: url('../images/naval_base.png');
+    background-image: url('Universal-Traveller-Tool/images/naval_base.png');
 }
 
 .icon-scout {
-    background-image: url('../images/scout_base.png');
+    background-image: url('Universal-Traveller-Tool/images/scout_base.png');
 }
 
 .icon-research {
-    background-image: url('../images/research_station.png');
+    background-image: url('Universal-Traveller-Tool/images/research_station.png');
 }
 
 /* Legend */

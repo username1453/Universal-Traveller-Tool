@@ -218,28 +218,28 @@ function planetaryfeatures(feature, layer) {
     let iconLine = [];
 
     if (feature.properties.gasgiant === 'Yes') {
-        iconLine.push('<img src="../images/gas_giant.png" alt="Gas Giant" title="Gas Giant" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/gas_giant.png" alt="Gas Giant" title="Gas Giant" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.imperial_naval === 'Yes') {
-        iconLine.push('<img src="../images/naval_base.png" alt="Naval Base" title="Naval Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/naval_base.png" alt="Naval Base" title="Naval Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.other_naval === 'Yes') {
-        iconLine.push('<img src="../images/other_naval_base.png" alt="Naval Base" title="Naval Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/other_naval_base.png" alt="Naval Base" title="Naval Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.scout === 'Yes') {
-        iconLine.push('<img src="../images/scout_base.png" alt="Scout Base" title="Scout Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/scout_base.png" alt="Scout Base" title="Scout Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.scout_waystation === 'Yes') {
-        iconLine.push('<img src="../images/scout_waystation.png" alt="Scout Waystation" title="Scout Waystation" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/scout_waystation.png" alt="Scout Waystation" title="Scout Waystation" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.military === 'Yes') {
-        iconLine.push('<img src="../images/military_base.png" alt="Military Base" title="Military Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/military_base.png" alt="Military Base" title="Military Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.research === 'Yes') {
-        iconLine.push('<img src="../images/research_station.png" alt="Research Facility" title="Research Facility" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/research_station.png" alt="Research Facility" title="Research Facility" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.prison === 'Yes') {
-        iconLine.push('<img src="../images/prison.png" alt="Prison" title="Prison" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/prison.png" alt="Prison" title="Prison" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
 
     // If there are icons to show, add them to the popup

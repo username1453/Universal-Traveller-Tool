@@ -227,10 +227,10 @@ function planetaryfeatures(feature, layer) {
         iconLine.push('<img src="images/other_naval_base.png" alt="Naval Base" title="Naval Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.scout === 'Yes') {
-        iconLine.push('<img src="images/scout_base.png" alt="Scout Base" title="Scout Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/Scout_base.png" alt="Scout Base" title="Scout Base" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.scout_waystation === 'Yes') {
-        iconLine.push('<img src="images/scout_waystation.png" alt="Scout Waystation" title="Scout Waystation" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/Scout_waystation.png" alt="Scout Waystation" title="Scout Waystation" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.military === 'Yes') {
         iconLine.push('<img src="images/military_base.png" alt="Military Base" title="Military Base" style="width: 24px; height: 24px; margin-right: 5px;" />');

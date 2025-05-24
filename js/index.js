@@ -400,6 +400,9 @@ const fogOfWarLayer = L.geoJSON(fog_of_war, {
     className: 'fog-layer'
   });
 
+// Add fog layer to map by default
+fogOfWarLayer.addTo(map);
+
 // 🌟 TRANSPARENT BACKGROUND
 map.getContainer().style.backgroundColor = 'transparent';
 

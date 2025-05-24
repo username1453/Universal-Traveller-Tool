@@ -461,7 +461,7 @@ layerLegend.onAdd = function(map) {
     div.innerHTML += `<label><input type="checkbox" id="toggle-political" checked> Political Boundaries</label><br>`;
     div.innerHTML += `<label><input type="checkbox" id="toggle-zones" checked> Zones</label><br>`;
     div.innerHTML += `<label><input type="checkbox" id="toggle-planetary" checked> Planetary Data</label><br>`;
-    div.innerHTML += `<label><input type="checkbox" id="toggle-fog"> Fog of War</label><br>`;
+    div.innerHTML += `<label><input type="checkbox" id="toggle-fog" checked> Fog of War</label><br>`;
     
     return div;
 };

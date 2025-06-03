@@ -209,7 +209,8 @@ function planetaryfeatures(feature, layer) {
 
     var popupContent = 
     "<h1>Planetary Data Access</h1>" +  // Popup header
-    "<p>" + "Core Planet Name: " + feature.properties.Name + "</p>" +  // Name of planet
+    "<p>Core Planet Name: <a href='https://wiki.travellerrpg.com/" + feature.properties.Name + "' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.Name + "</a></p>"
+    //"<p>" + "Core Planet Name: " + feature.properties.Name + "</p>" +  // Name of planet
     "<p>Universal World Profile: <a href='https://wiki.travellerrpg.com/Universal_World_Profile' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.UWP + "</a></p>" // UWP of planet and link to UWP meaning
     "<p>" + "Subsector: " + (subsectorNames[feature.properties.SS] || 'Unknown') + "</p>" +   // Subsector located within
     "<p>";

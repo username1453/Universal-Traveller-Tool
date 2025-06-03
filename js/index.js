@@ -209,7 +209,7 @@ function planetaryfeatures(feature, layer) {
 
     var popupContent = 
     "<h1>Planetary Data Access</h1>" +  // Popup header
-    "<p>Core Planet Name: <a href='https://wiki.travellerrpg.com/" + feature.properties.Name + "' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.Name + "</a></p>" +// Name of planet and link to Traveller wiki
+    "<p>Core Planet Name: <a href='https://wiki.travellerrpg.com/" + feature.properties.Name + '_(world)' + "' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.Name + "</a></p>" +// Name of planet and link to Traveller wiki
     "<p>Universal World Profile: <a href='https://wiki.travellerrpg.com/Universal_World_Profile' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.UWP + "</a></p>" +// UWP of planet and link to UWP meaning
     "<p>" + "Subsector: " + (subsectorNames[feature.properties.SS] || 'Unknown') + "</p>" +   // Subsector located within
     "<p>";
@@ -381,8 +381,15 @@ function boundariespolygon(feature) {
 
 var politicalboundariesvar = L.geoJSON(politicalboundaries, {
     style: boundariespolygon,
-    onEachFeature: (feature, layer) => layer.bindPopup(`Nation: ${feature.properties.Nation || 'Unknown'}`)
+    onEachFeature: (feature, layer) => {
+        const nation = feature.properties.Nation || 'Unknown';
+        const link = 'https://username1453.github.io/Universal-Traveller-Tool/sector_data/' + encodeURIComponent(nation) + '.pdf';
+        
+        const popupHtml = `Nation: <a href="${link}" target="_blank" style="color:inherit; text-decoration:none;">${nation}</a>`;
+        layer.bindPopup(popupHtml);
+    }
 }).addTo(map);
+
 
 // Fog of War layer
 map.createPane('fogPane');

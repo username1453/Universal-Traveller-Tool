@@ -1569,7 +1569,7 @@ var planetarydata = {
                 "Sector": "Solo",
                 "SS": "P",
                 "Name": "Santorini",
-                "UWP": "A689856-D",
+                "UWP": "A689876-D",
                 "Bases": null,
                 "Remarks": "Ri Ph Ht",
                 "Zone": null,

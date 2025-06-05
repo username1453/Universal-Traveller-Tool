@@ -2274,7 +2274,7 @@ var planetarydata = {
                 "Sector": "Solo",
                 "SS": "N",
                 "Name": "Tarsus",
-                "UWP": "A785867-A",
+                "UWP": "E785733-A",
                 "Bases": null,
                 "Remarks": "Ga Ri Pa Ph O:1035 Ht",
                 "Zone": null,

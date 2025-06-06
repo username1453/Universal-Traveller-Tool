@@ -8384,7 +8384,7 @@ var planetarydata = {
                 "Sector": "Solo",
                 "SS": "L",
                 "Name": "Heraklion",
-                "UWP": "D543312-9",
+                "UWP": "D543312-7",
                 "Bases": null,
                 "Remarks": "Lo Po",
                 "Zone": null,

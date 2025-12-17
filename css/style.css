@@ -52,6 +52,26 @@
     min-width: 120px; /* Prevent buttons from being too narrow */
     height: 28px; /* Define a standard button height */
   }
+
+.custom-btn-small {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 9px;
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    border-radius: 12px; /* Rounded edges */
+    border: 3px solid #32CD32; /* Thick green outline */
+    background-color: transparent; /* Transparent fill */
+    color: #32CD32; /* Green text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    display: inline-block; /* Ensures the text is centered */
+    line-height: 1.2; /* Adjust line height for better vertical alignment */
+    width: auto; /* Ensure width adjusts based on text */
+    min-width: 100px; /* Prevent buttons from being too narrow */
+    height: 28px; /* Define a standard button height */
+}
   
   .custom-btn:hover {
     background-color: #32CD32; /* Light green background on hover */
@@ -322,6 +342,7 @@
   .legend-hidden {
     display: none !important;
   }
+
 
 
 

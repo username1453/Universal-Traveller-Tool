@@ -6,20 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="images/battleship_favicon.png" type="image/png">
     <title>Universal Traveller Tool (UTT)</title>
-    <base href="/Universal-Traveller-Tool/">
+    <base href="/Universal-Traveller-Tool-Development/"> <!--Remove -Development if porting over to production!-->
     <link href="css/leaflet.css" type="text/css" rel=stylesheet>
     <link href="css/style.css" type="text/css" rel=stylesheet>
   </head>
   <body>
     <div class="starfield"></div>
-    <h1 style="color: #32CD32; text-align: center;">TAS Planetary Data Interface Circa. 3003</h1>  
-    <button id="invert-btn" class="custom-btn">Invert Map</button>
-    <button id="toggle-marker-btn" class="custom-btn">Toggle Spaceship</button>
-    <a href="sector_data/Binder%20Front%20Pages.pdf" target="_blank">
-      <button id="explain-btn" class="custom-btn">Explanatory Data</button>
-    </a>
+    <nav class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      ☰
+    </div>
+      <ul id="menu" class="menu">
+        <li><button id="invert-btn" class="custom-btn">Invert Map</button></li>
+        <li><button id="toggle-marker-btn" class="custom-btn">Toggle Spaceship</button></li>
+        <li>
+          <a href="sector_data/Binder%20Front%20Pages.pdf" target="_blank" class="custom-btn">
+            Explanatory Data
+          </a>
+        </li>
+        <li class="unit-control-group">
+          <button id="military-units-main-btn"class="custom-btn" onclick="toggleUnitDropdown(event)">Military Units</button>
+          <ul id="unit-dropdown" class="unit-dropdown-content">
+            <li>
+                <select id="unit-type-select">
+                    <option value="spaceship-red">Add Red Ship</option>
+                    <option value="soldier-red">Add Red Soldier</option>
+                    <option value="spaceship-blue">Add Blue Ship</option>
+                    <option value="soldier-blue">Add Blue Soldier</option>
+                </select>
+            </li>
+            <li><button id="add-unit-btn" class="custom-btn-small">Add Selected Unit</button></li>
+            <li>
+                <button id="load-army-btn" class="custom-btn-small" onclick="document.getElementById('unit-upload').click()">Load Army Data</button>
+                <input type="file" id="unit-upload" class="hidden" accept=".json" />
+            </li>
+            <li><button id="save-units-btn" class="custom-btn-small">Save Army Data</button></li>
+          </ul>
+        </li>
+      </ul>
     <button id="toggleLegend" class="custom-btn">Toggle Legend</button>
-    <div id="map"></div> <!-- The map! -->
+    <h1 class="nav-title" style="color: #32CD32;">TAS Planetary Data Interface Circa. Dev. Ver</h1>
+    </nav>
+    <div id="map"></div><!--The map!-->
+    <div class="footer"></div>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+      }
+      function toggleUnitDropdown(event) {
+        event.stopPropagation(); // Stops the click from bubbling up to the window listener
+        const dropdown = document.getElementById("unit-dropdown");
+        dropdown.classList.toggle("hidden"); // Toggles the visibility
+      }
+    </script>
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/esri-leaflet-debug.js"></script>
@@ -27,6 +67,11 @@
     <script src="js/PlanetaryData.js"></script>
     <script src="js/PoliticalBoundaries.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/MilitaryUnits.js"></script>
   </body>
 </html>
+
+
+
+
 

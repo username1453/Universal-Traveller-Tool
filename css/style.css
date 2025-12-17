@@ -195,7 +195,10 @@
 }
 
 .unit-dropdown-content li {
-  padding: 5px 0;
+    margin: 0;       /* Removes space outside the list item */
+    padding: 0;      /* Removes space inside the list item */
+    display: block;  /* Ensures they stack tightly */
+    line-height: 1;  /* Prevents text-line spacing from pushing the button down */
 }
 
 /* Navbar full width */
@@ -352,6 +355,7 @@
   .legend-hidden {
     display: none !important;
   }
+
 
 
 

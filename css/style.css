@@ -4,6 +4,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Ensure the html and body take up the full height and width */
 /* Base size for HTML element */
     html {
@@ -348,6 +352,7 @@
   .legend-hidden {
     display: none !important;
   }
+
 
 
 

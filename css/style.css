@@ -54,7 +54,9 @@
   }
 
 .custom-btn-small {
-    position: absolute;
+    position: relative; /* Change from absolute to relative */
+    display: block;    /* Makes them stack vertically in the menu */
+    margin: 5px auto;  /* Centers them and adds spacing between */
     padding: 5px 10px;
     font-size: 9px;
     font-weight: bold; /* Bold text */
@@ -66,7 +68,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     z-index: 1000;
-    display: inline-block; /* Ensures the text is centered */
     line-height: 1.2; /* Adjust line height for better vertical alignment */
     width: auto; /* Ensure width adjusts based on text */
     min-width: 100px; /* Prevent buttons from being too narrow */
@@ -74,6 +75,11 @@
 }
   
   .custom-btn:hover {
+    background-color: #32CD32; /* Light green background on hover */
+    color: black; /* White text on hover */
+  }
+
+  .custom-btn-small:hover {
     background-color: #32CD32; /* Light green background on hover */
     color: black; /* White text on hover */
   }
@@ -342,6 +348,7 @@
   .legend-hidden {
     display: none !important;
   }
+
 
 
 

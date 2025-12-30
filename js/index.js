@@ -133,8 +133,8 @@ function planetaryfeatures(feature, layer) {
 
     var popupContent = 
     "<h1>Planetary Data Access</h1>" +  // Popup header
-    "<p>Core Planet Name: <a href='https://wiki.travellerrpg.com/" + feature.properties.Name + '_(world)' + "' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.Name + "</a></p>" +// Name of planet and link to Traveller wiki
-    "<p>Universal World Profile: <a href='https://wiki.travellerrpg.com/Universal_World_Profile' target='_blank' style='color:inherit; text-decoration:none;'>" + feature.properties.UWP + "</a></p>" +// UWP of planet and link to UWP meaning
+    "<p>Core Planet Name: <a href='https://wiki.travellerrpg.com/" + feature.properties.Name + '_(world)' + "' target='_blank' style='color:inherit; text-decoration: underline;'>" + feature.properties.Name + "</a></p>" +// Name of planet and link to Traveller wiki
+    "<p>Universal World Profile: <a href='https://wiki.travellerrpg.com/Universal_World_Profile' target='_blank' style='color:inherit; text-decoration: underline;'>" + feature.properties.UWP + "</a></p>" +// UWP of planet and link to UWP meaning
     "<p>" + "Subsector: " + (subsectorNames[feature.properties.SS] || 'Unknown') + "</p>" +   // Subsector located within
     "<p>";
 
@@ -454,5 +454,6 @@ document.getElementById('toggleLegend').addEventListener('click', function() {
     const control = document.querySelector('.legend-control');
     control.classList.toggle('legend-hidden');
 });
+
 
 

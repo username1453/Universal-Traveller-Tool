@@ -3976,7 +3976,7 @@ var planetarydata = {
         Sector: "Solo",
         SS: "P",
         Name: "Saskatoon",
-        UWP: "A887000-0",
+        UWP: "X887000-0",
         Bases: null,
         Remarks: "Hi Ga Pr Pz Ht",
         Zone: null,
@@ -18003,4 +18003,5 @@ var planetarydata = {
     },
   ],
 };
+
 

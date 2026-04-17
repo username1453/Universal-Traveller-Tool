@@ -173,7 +173,7 @@ function planetaryfeatures(feature, layer) {
         iconLine.push('<img src="images/prison.png" alt="Prison" title="Prison" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
     if (feature.properties.corsair === 'Yes') {
-        iconLine.push('<img src="images/corsair.png" alt="Pirates" title="Pirates" style="width: 24px; height: 24px; margin-right: 5px;" />');
+        iconLine.push('<img src="images/Corsair.png" alt="Pirates" title="Pirates" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
 
     // If there are icons to show, add them to the popup

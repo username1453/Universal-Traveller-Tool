@@ -336,6 +336,10 @@
     background-image: url('../images/research_station.png'); /* Unused */
 }
 
+.icon-corsair {
+    background-image: url('../images/Corsair.png'); /* Unused */
+}
+
 .military-unit-icon {
     background: transparent;
 }

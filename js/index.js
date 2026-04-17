@@ -108,6 +108,13 @@ var researchIcon = L.divIcon({
     popupAnchor: [0, -24]
 });
 
+var corsairIcon = L.divIcon({
+    className: 'icon-corsair iconsdiv',
+    iconSize: [12, 12],
+    iconAnchor: [36, 6],
+    popupAnchor: [0, -24]
+});
+
 // 📍 PLANETARY FEATURES AND GEOJSON HANDLING
 // 🗂️ Array to Store Tooltip References
 const tooltips = []; // ✅ Global declaration
@@ -164,6 +171,9 @@ function planetaryfeatures(feature, layer) {
     }
     if (feature.properties.prison === 'Yes') {
         iconLine.push('<img src="images/prison.png" alt="Prison" title="Prison" style="width: 24px; height: 24px; margin-right: 5px;" />');
+    }
+    if (feature.properties.corsair === 'Yes') {
+        iconLine.push('<img src="images/corsair.png" alt="Pirates" title="Pirates" style="width: 24px; height: 24px; margin-right: 5px;" />');
     }
 
     // If there are icons to show, add them to the popup

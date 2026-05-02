@@ -600,7 +600,7 @@ def generate_roads(
         sp_clearance = []
         for px, py in starport_building.polygon():
             dx, dy = px - sp_cx, py - sp_cy
-            sp_clearance.append((sp_cx + dx * 1.5, sp_cy + dy * 1.5))
+            sp_clearance.append((sp_cx + dx * 1.5, sp_cy + dy * 1.2))
         lake_polys.append(sp_clearance)
 
     max_crossings = None if layout == "radial" else 3
@@ -1309,7 +1309,7 @@ def render_map(uwp, roads, water, buildings, bounds, full_bounds, layout_name, o
     fig_w = 14
     aspect = (ymax - ymin) / (xmax - xmin)
     
-    fig, ax = plt.subplots(figsize=(fig_w, fig_w * aspect), dpi=120)
+    fig, ax = plt.subplots(figsize=(fig_w, fig_w * aspect), dpi=96)
     ax.set_xlim(xmin, xmax)
     ax.set_ylim(ymin, ymax)
     ax.set_aspect("equal")
